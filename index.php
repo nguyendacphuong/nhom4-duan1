@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello word</h1>
-    <h2>Hú anh em</h2>
-</body>
-</html>
+<?php
+session_start();
+$url = isset($_GET['url']) ? $_GET['url'] : "/";
+require_once './commons/utils.php';
+switch ($url) {
+    case '/':
+        require_once './client/business/homepage.php';
+        home();
+        break;
+    case 'gioi-thieu':
+        require_once './client/business/homepage.php';
+        about();
+    case 'danh-muc':
+        require_once './client/business/category.php';
+        list_product();
+        break;
+    case 'cp-admin':
+        require_once './admin/business/dashboard.php';
+        dashboard_index();
+        break;
+
+    default:
+        # code...
+        break;
+}
+
+?>
