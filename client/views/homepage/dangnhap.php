@@ -26,4 +26,4 @@
         <div class="right">
             <img src="./imgbanner/bannerlogin.jpg" alt="">
         </div>
-    </div>
+</div>
