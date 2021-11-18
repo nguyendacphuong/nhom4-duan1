@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
-    <?php include_once "./css/index.css"; ?>
+    
 </head>
+
 <body>
     <div class="containner">
         <div class="header-top">
@@ -28,7 +30,7 @@
                     <li><a href="">giá tốt</a></li>
                 </ul>
                 <form class="search">
-                    <input  name="" placeholder="Bạn tìm gì....">
+                    <input name="" placeholder="Bạn tìm gì....">
                 </form>
                 <div class="iconoperation">
                     <a href=""><img src="imgheader/iconperson.png" alt=""></a>
@@ -38,35 +40,9 @@
         </header>
     </div>
     <div class="content">
-        <div class="left">
-            <h2>ĐĂNG NHẬP</h2>
-            <span>Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu<br> đãi tốt hơn!</span>
-            <form>
-                <div>
-                    <label for="">Email*</label><br>
-                    <input type="email" name="email">
-                    <strong><?php echo isset($errot['email']) ? $errot['email'] : ' '; ?></strong>
-                </div>
-                <div>
-                    <label for="">Mật khẩu*</label><br>
-                    <input type="password" name="pass">
-                    <strong> <?php echo isset($errot1['pass']) ? $errot1['pass'] : ''; ?></strong>
-                   
-                </div>
-                <div class="forgotpass">
-                    <a href="">Quên mật khẩu?</a>
-                </div>
-                <div>
-                    <button class="login" name="dangnhap">ĐĂNG NHẬP</button><br>
-                </div>
-            </form>
-            <?php 
-            // hdlsad;áhdljshdkjsahda;shdkjsahdas
-            // hdlsad;áhdljshdkjsahda;shdkjsahdas
-            // hdlsad;áhdljshdkjsahda;shdkjsahdas
-            ?>
-            <a class="create" href="/duan1-n4/frontend/dangky.html?"><button class="createaccount">TẠO TÀI KHOẢN</button></a>
-        </div>
+         <?php 
+         include_once $view;
+         ?>
         <div class="right">
             <img src="./imgbanner/bannerlogin.jpg" alt="">
         </div>
@@ -123,4 +99,5 @@
         <!--FOOTER END-->
     </div>
 </body>
+
 </html>

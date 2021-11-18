@@ -1,4 +1,5 @@
 <?php
+include_once "sestem_dao.php";
 /**
  * Mở kết nối đến CSDL sử dụng PDO
  */
