@@ -10,8 +10,8 @@ CREATE TABLE `User` (
   `updated_at` datetime DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-ALTER TABLE `User`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `role_id` (`role_id`);
---   and user --
+-- ALTER TABLE `User`
+--   ADD PRIMARY KEY (`id`),
+--   ADD KEY `role_id` (`role_id`);
+-- --   and user --
 
