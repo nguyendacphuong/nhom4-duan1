@@ -1,7 +1,8 @@
 <?php
 session_start();
-$url = isset($_GET['url']) ? $_GET['url'] : "/";
+$url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : "/";
 require_once './commons/utils.php';
+require_once './dao/system_dao.php';
 switch ($url) {
     case '/':
         require_once './client/business/homepage.php';
@@ -17,6 +18,22 @@ switch ($url) {
     case 'cp-admin':
         require_once './admin/business/dashboard.php';
         dashboard_index();
+        break;
+    case 'cp-admin/danh-muc':
+        require_once './admin/business/category.php';
+        cate_index();
+        break;
+    case 'cp-admin/danh-muc/xoa':
+        require_once './admin/business/category.php';
+        cate_remove();
+        break;
+    case 'cp-admin/danh-muc/tao-moi':
+        require_once './admin/business/category.php';
+        cate_add_form();
+        break;
+    case 'cp-admin/danh-muc/luu-tao-moi':
+        require_once './admin/business/category.php';
+        cate_save_add();
         break;
 
     default:
